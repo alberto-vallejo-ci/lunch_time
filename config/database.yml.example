@@ -1,0 +1,19 @@
+general: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  host: localhost
+  username:
+  password:
+
+development:
+  <<: *default
+  database: lunch_time_dev
+
+test:
+  <<: *default
+  database: lunch_time_test
+
+production:
+  <<: *default
+  database: lunch_time_dev
