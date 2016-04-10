@@ -1,0 +1,9 @@
+.col-md-6.col-md-offset-3
+  .list-header
+    %h3= @restaurant.name
+    = link_to 'Update Restaurant', edit_restaurant_path(@restaurant), class: 'btn btn-primary'
+  %p= "Address: #{@restaurant.address}"
+  %p= "Telephone: #{@restaurant.telephone}"
+  %p= "Average Cost: $ #{@restaurant.average_cost} MXN"
+  %p= "Average Rate: #{@restaurant.average_rate}"
+  %p= "Comments: #{@restaurant.comments}"

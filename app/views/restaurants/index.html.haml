@@ -1,0 +1,7 @@
+.col-md-6.col-md-offset-3
+  .list-header
+    %h3= 'Restaurants'
+    = link_to 'Add Restaurant', new_restaurant_path, class: 'btn btn-primary'
+
+  %ul
+    = render partial: 'restaurant_item', collection: @restaurants, as: :restaurant

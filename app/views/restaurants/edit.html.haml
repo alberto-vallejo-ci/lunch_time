@@ -1,0 +1,23 @@
+.col-md-6.col-md-offset-3
+  = form_for(@restaurant) do |f|
+    .form-group
+      = f.label :name
+      = f.text_field :name, class: 'form-control'
+    .form-group
+      = f.label :address
+      = f.text_field :address, class: 'form-control'
+    .form-group
+      = f.label :telephone
+      = f.text_field :telephone, class: 'form-control'
+    .form-group
+      = f.label :average_cost
+      .input-group
+        .input-group-addon $
+        = f.text_field :average_cost, class: 'form-control'
+    .form-group
+      = f.label :average_rate
+      = f.text_field :average_rate, class: 'form-control'
+    .form-group
+      = f.label :comments
+      = f.text_area :comments, class: 'form-control'
+    =f.submit 'Submit', class: 'btn btn-primary'
