@@ -4,10 +4,14 @@
   = form_tag searches_path do
     .form-group
       = label_tag('Cuanto te gustaría gastar?')
-      = text_field_tag(:lowest_cost, '', name: 'search[cost][lowest]', class: 'form-control')
-      = text_field_tag(:highest_cost, '', name: 'search[cost][highest]', class: 'form-control')
+      = text_field_tag(:lowest_cost, '1', placeholder: 'Monto Mínimo',
+                        name: 'search[cost][lowest]', class: 'form-control')
+      = text_field_tag(:highest_cost, '100',  placeholder: 'Monto Maximo',
+                       name: 'search[cost][highest]', class: 'form-control')
     .form-group
       = label_tag('Elige el rango de prestigio')
-      = text_field_tag(:lowest_rate, '', name: 'search[rate][lowest]', class: 'form-control')
-      = text_field_tag(:highest_rate, '', name: 'search[rate][highest]', class: 'form-control')
+      = text_field_tag(:lowest_rate, '1', placeholder: 'Rango Mínimo',
+                       name: 'search[rate][lowest]', class: 'form-control')
+      = text_field_tag(:highest_rate, '5', placeholder: 'Rango Maximo',
+                       name: 'search[rate][highest]', class: 'form-control')
     = submit_tag('Buscar', class: 'btn btn-primary')

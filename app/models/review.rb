@@ -1,14 +1,13 @@
-class Restaurant < ActiveRecord::Base
+class Review < ActiveRecord::Base
   #-------------------
   # ASSOCIATIONS
   #-------------------
-  has_many :reviews
+  belongs_to :restaurant
 
   #-------------------
   # VALIDATIONS
   #-------------------
-  validates :name, presence: true, length: 1..99
-  validates :average_rate, :average_cost, numericality: true, allow_nil: true
+  validates :cost, :rate, presence: true, numericality: true
 
   #-------------------
   # SCOPES

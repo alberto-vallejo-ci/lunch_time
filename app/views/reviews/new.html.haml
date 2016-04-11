@@ -1,0 +1,20 @@
+.col-md-6.col-md-offset-3
+  .list-header
+    %h3= @restaurant.name
+
+  = form_tag(restaurant_reviews_path(@restaurant.id)) do
+    .form-group
+      = label_tag :name, 'Cual es tu nombre?'
+      = text_field_tag :name, '', name: 'review[name]',class: 'form-control'
+    .form-group
+      = label_tag :cost
+      = text_field_tag :cost, '', name: 'review[cost]',class: 'form-control'
+    .form-group
+      = label_tag :rate
+      = text_field_tag :rate, '', name: 'review[rate]', class: 'form-control'
+    .form-group
+      = label_tag :comments
+      = text_field_tag :comments, '', name: 'review[comments]', class: 'form-control'
+    .form-group
+      = hidden_field_tag :restaurant_id, @restaurant.id, name: 'review[restaurant_id]'
+    = submit_tag 'Submit', class: 'btn btn-primary'

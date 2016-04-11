@@ -8,7 +8,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    @restaurant = Restaurant.find(safe_params[:id])
+    @restaurant = Restaurant.includes(:reviews).find(safe_params[:id])
   end
 
   def create

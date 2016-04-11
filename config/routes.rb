@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   resource :searches, only: :create
   resource :home, only: :show
-  resources :restaurants
+  resources :restaurants do
+    resources :reviews
+  end
 end
