@@ -1,0 +1,25 @@
+AllCops:
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/**/*'
+    - 'doc/**/*'
+    - 'spec/**/*'
+    - 'features/**/*'
+
+LineLength:
+  Max: 99
+
+Style/Documentation:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Rails/Validation:
+  Enabled: false
+Rails/HasAndBelongsToMany:
+  Enabled: false
