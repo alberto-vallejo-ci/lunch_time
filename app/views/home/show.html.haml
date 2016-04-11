@@ -1,0 +1,13 @@
+.col-md-6.col-md-offset-3
+  %h3= 'Busquedas'
+
+  = form_tag searches_path do
+    .form-group
+      = label_tag('Cuanto te gustaría gastar?')
+      = text_field_tag(:lowest_cost, '', name: 'search[cost][lowest]', class: 'form-control')
+      = text_field_tag(:highest_cost, '', name: 'search[cost][highest]', class: 'form-control')
+    .form-group
+      = label_tag('Elige el rango de prestigio')
+      = text_field_tag(:lowest_rate, '', name: 'search[rate][lowest]', class: 'form-control')
+      = text_field_tag(:highest_rate, '', name: 'search[rate][highest]', class: 'form-control')
+    = submit_tag('Buscar', class: 'btn btn-primary')
