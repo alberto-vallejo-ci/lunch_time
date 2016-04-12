@@ -1,4 +1,6 @@
 %li
-  = link_to(restaurant.name, restaurant_path(restaurant.id))
-  |
-  = link_to('+ Reseña', new_restaurant_review_path(restaurant), class: 'btn btn-primary')
+  .content
+    = link_to(restaurant.name, restaurant_path(restaurant.id))
+
+  .actions
+    = link_to('+ Reseña', new_restaurant_review_path(restaurant))
