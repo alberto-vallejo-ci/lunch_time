@@ -8,12 +8,15 @@ general: &default
 
 development:
   <<: *default
-  database: lunch_time_dev
+  database: lonchetime_dev
 
 test:
   <<: *default
-  database: lunch_time_test
+  database: lonchetime_test
 
 production:
-  <<: *default
-  database: lunch_time_dev
+  adapter: postgresql
+    pool: 5
+    host: localhost
+    min_messages: WARNING
+    database: lonchetime
