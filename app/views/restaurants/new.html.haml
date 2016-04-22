@@ -1,26 +1,27 @@
 .col-md-6.col-md-offset-3
   .list-header
-    %h3= 'New Restaurant'
+    %h3= t('restaurants.new')
 
   = form_for(@restaurant) do |f|
     .form-group
-      = f.label :name
-      = f.text_field :name, class: 'form-control'
+      = f.label :name, t('general.name')
+      = f.text_field :name, { class: 'form-control', required: 'required' }
     .form-group
-      = f.label :address
-      = f.text_field :address, class: 'form-control'
+      = f.label :address, t('general.address')
+      = f.text_field :address, { class: 'form-control', required: 'required' }
     .form-group
-      = f.label :telephone
+      = f.label :telephone, t('general.telephone')
       = f.text_field :telephone, class: 'form-control'
     .form-group
-      = f.label :average_cost
+      = f.label :average_cost, t('restaurants.spent')
       .input-group
         .input-group-addon $
-        = f.text_field :average_cost, class: 'form-control'
+        = f.text_field :average_cost, { class: 'form-control', required: 'required' }
     .form-group
-      = f.label :average_rate
-      = f.text_field :average_rate, class: 'form-control'
+      = f.label :average_rate, t('restaurants.set_rate')
+      = label_tag :rate, t('restaurants.rate'), class: 'font-small'
+      = f.text_field :average_rate, { class: 'form-control', required: 'required' }
     .form-group
-      = f.label :comments
-      = f.text_area :comments, class: 'form-control'
-    =f.submit 'Submit', class: 'btn btn-primary'
+      = f.label :comments, t('general.commets')
+      = f.text_area :comments, placeholder: t('restaurants.comments_holder'), class: 'form-control'
+    = f.submit t('general.save'), class: 'btn btn-primary'

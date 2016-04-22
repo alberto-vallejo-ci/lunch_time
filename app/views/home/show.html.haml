@@ -1,17 +1,17 @@
 .col-md-6.col-md-offset-3
-  %h3= 'Busquedas'
+  %h3= t('home.searches')
 
   = form_tag searches_path do
     .form-group
-      = label_tag('Cuanto te gustaría gastar?')
-      = text_field_tag(:lowest_cost, '1', placeholder: 'Monto Mínimo',
+      = label_tag t('home.cost')
+      = text_field_tag(:lowest_cost, '1', placeholder: t('home.min_cost'),
                         name: 'search[cost][lowest]', class: 'form-control')
-      = text_field_tag(:highest_cost, '100',  placeholder: 'Monto Maximo',
+      = text_field_tag(:highest_cost, '100',  placeholder: t('home.max_cost'),
                        name: 'search[cost][highest]', class: 'form-control')
     .form-group
-      = label_tag('Elige el rango de prestigio')
-      = text_field_tag(:lowest_rate, '1', placeholder: 'Rango Mínimo',
+      = label_tag t('home.rate')
+      = text_field_tag(:lowest_rate, '1', placeholder: t('home.min_rate'),
                        name: 'search[rate][lowest]', class: 'form-control')
-      = text_field_tag(:highest_rate, '5', placeholder: 'Rango Maximo',
+      = text_field_tag(:highest_rate, '5', placeholder: t('home.max_rate'),
                        name: 'search[rate][highest]', class: 'form-control')
-    = submit_tag('Buscar', class: 'btn btn-primary')
+    = submit_tag(t('general.search'), class: 'btn btn-primary')

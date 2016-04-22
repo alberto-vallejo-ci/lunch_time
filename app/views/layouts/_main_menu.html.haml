@@ -1,13 +1,13 @@
 %nav.navbar.navbar-default
   .container-fluid
     .navbar-header
-      %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+      %button.navbar-toggle.collapsed{ 'aria-expanded' => 'false', 'data-target' => '#menu-collapse',' "data-toggle"' => 'collapse', type: 'button' }
         %span.sr-only Menu
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to('Lunch Time', root_path, class: 'navbar-brand')
-    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      = link_to('Lonche Time', root_path, class: 'navbar-brand')
+    #menu-collapse.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li{ class: active_menu('restaurants') }
-          = link_to('Restaurants', restaurants_path)
+          = link_to(t('restaurants.restaurants'), restaurants_path)

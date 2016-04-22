@@ -1,7 +1,9 @@
 .central-container
   .list-header
-    %h3= 'Restaurants'
-    = link_to 'Add Restaurant', new_restaurant_path, class: 'btn btn-primary'
+    %h3= t('restaurants.restaurants')
+    = link_to new_restaurant_path, class: 'btn btn-primary' do
+      %span{ class: 'glyphicon glyphicon-plus' }
+      %span= t('restaurants.restaurant')
 
   %ul#restaurants-list
     = render partial: 'restaurant_item', collection: @restaurants, as: :restaurant

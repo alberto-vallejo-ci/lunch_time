@@ -1,0 +1,36 @@
+es:
+  general:
+    address: Dirección
+    commets: Comentarios
+    name: Nombre
+    results: Resultados
+    save: Guardar
+    search: Buscar
+    telephone: Teléfono
+
+  home:
+    searches: Busquedas
+    cost: ¿Cuanto te gustaría gastar?
+    rate: Elige el rango de prestigio
+    max_cost: Costo Maximo
+    max_rate: Rango Maximo
+    min_cost: Costo Mínimo
+    min_rate: Rango Mínimo
+
+  restaurants:
+    average_cost: Costo promedio
+    average_rate: Calificación promedio
+    comments_holder: Menciona promociones, ofertas o detalles a resaltar.
+    edit: Editar Restaurante
+    new: Agrega un Restaurante nuevo
+    rate: 1 = Menor - 5 = Mayor
+    restaurant: Restaurante
+    restaurants: Restaurantes
+    review: Reseña
+    reviews: Reseñas
+    set_rate: ¿Que calificación le otorgas?
+    spent: ¿Cuanto gastas normalmente?
+    total_reviews: Total de reseñas
+
+  reviews:
+    name: ¿Cual es tu nombre?

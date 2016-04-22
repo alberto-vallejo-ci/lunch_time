@@ -3,4 +3,6 @@
     = link_to(restaurant.name, restaurant_path(restaurant.id))
 
   .actions
-    = link_to('+ Reseña', new_restaurant_review_path(restaurant))
+    = link_to ( new_restaurant_review_path(restaurant)) do
+      %span{ class: 'glyphicon glyphicon-plus' }
+      %span= t('restaurants.review')

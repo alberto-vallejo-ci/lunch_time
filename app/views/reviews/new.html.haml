@@ -4,17 +4,19 @@
 
   = form_tag(restaurant_reviews_path(@restaurant.id)) do
     .form-group
-      = label_tag :name, 'Cual es tu nombre?'
-      = text_field_tag :name, '', name: 'review[name]',class: 'form-control'
+      = label_tag :name, t('reviews.name')
+      = text_field_tag :name, '', { name: 'review[name]', class: 'form-control', required: 'required' }
     .form-group
-      = label_tag :cost
-      = text_field_tag :cost, '', name: 'review[cost]',class: 'form-control'
+      = label_tag :cost, t('restaurants.spent')
+      .input-group
+        .input-group-addon $
+        = text_field_tag :cost, '', { name: 'review[cost]',class: 'form-control', required: 'required' }
     .form-group
-      = label_tag :rate
-      = text_field_tag :rate, '', name: 'review[rate]', class: 'form-control'
+      = label_tag :rate, t('restaurants.set_rate')
+      = text_field_tag :rate, '', { name: 'review[rate]', class: 'form-control', required: 'required' }
     .form-group
-      = label_tag :comments
+      = label_tag :comments, t('general.commets')
       = text_field_tag :comments, '', name: 'review[comments]', class: 'form-control'
     .form-group
       = hidden_field_tag :restaurant_id, @restaurant.id, name: 'review[restaurant_id]'
-    = submit_tag 'Submit', class: 'btn btn-primary'
+    = submit_tag t('general.save'), class: 'btn btn-primary'

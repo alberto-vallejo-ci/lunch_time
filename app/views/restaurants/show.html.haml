@@ -1,18 +1,35 @@
 .col-md-6.col-md-offset-3
   .list-header
     %h3= @restaurant.name
-    = link_to 'Update Restaurant', edit_restaurant_path(@restaurant), class: 'btn btn-primary'
-    = link_to('+ Reseña', new_restaurant_review_path(@restaurant), class: 'btn btn-primary')
+    = link_to edit_restaurant_path(@restaurant), class: 'btn btn-primary' do
+      %span{ class: 'glyphicon glyphicon-edit' }
+      %span= t('restaurants.restaurant')
 
-  %p= "Address: #{@restaurant.address}"
-  %p= "Telephone: #{@restaurant.telephone}"
-  %p= "Average Cost: $ #{@restaurant.average_cost} MXN"
-  %p= "Average Rate: #{@restaurant.average_rate}"
-  %p= "Comments: #{@restaurant.comments}"
+    = link_to new_restaurant_review_path(@restaurant), class: 'btn btn-primary' do
+      %span{ class: 'glyphicon glyphicon-plus' }
+      %span= t('restaurants.review')
+
+  %p
+    %span= "#{t('general.address')}:"
+    %span= @restaurant.address
+  %p
+    %span= "#{t('general.telephone')}:"
+    %span= @restaurant.telephone
+  %p
+    %span= "#{t('restaurants.average_cost')}:"
+    %span= "$ #{@restaurant.average_cost} MXN"
+  %p
+    %span= "#{t('restaurants.average_rate')}:"
+    %span= @restaurant.average_rate
+  %p
+    %span= "#{t('general.commets')}:"
+    %span= @restaurant.comments
 
   #restaurant-reviews
-    %h3= 'Reseñas'
-    %p= "Total de reseñas: #{@restaurant.reviews.count}"
+    %h3= t('restaurants.reviews')
+    %p
+      %span= "#{t('restaurants.total_reviews')}:"
+      %span= @restaurant.reviews.count
     %ul
       - @restaurant.reviews.each do |review|
         %li= "#{review.name} | #{review.rate} | $#{review.cost}MXN | #{ review.comments }"
