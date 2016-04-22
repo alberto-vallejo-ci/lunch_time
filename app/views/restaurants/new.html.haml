@@ -5,23 +5,23 @@
   = form_for(@restaurant) do |f|
     .form-group
       = f.label :name, t('general.name')
-      = f.text_field :name, { class: 'form-control', required: 'required' }
+      = f.text_field :name, { required: 'required' }
     .form-group
       = f.label :address, t('general.address')
-      = f.text_field :address, { class: 'form-control', required: 'required' }
+      = f.text_field :address, { required: 'required' }
     .form-group
       = f.label :telephone, t('general.telephone')
-      = f.text_field :telephone, class: 'form-control'
+      = f.text_field :telephone
     .form-group
       = f.label :average_cost, t('restaurants.spent')
       .input-group
         .input-group-addon $
-        = f.text_field :average_cost, { class: 'form-control', required: 'required' }
+        = f.text_field :average_cost, { required: 'required' }
     .form-group
       = f.label :average_rate, t('restaurants.set_rate')
       = label_tag :rate, t('restaurants.rate'), class: 'font-small'
-      = f.text_field :average_rate, { class: 'form-control', required: 'required' }
+      = f.select :average_rate, options_for_select([1, 2, 3, 4, 5], 5)
     .form-group
       = f.label :comments, t('general.commets')
-      = f.text_area :comments, placeholder: t('restaurants.comments_holder'), class: 'form-control'
-    = f.submit t('general.save'), class: 'btn btn-primary'
+      = f.text_area :comments, placeholder: t('restaurants.comments_holder')
+    = f.submit t('general.save')

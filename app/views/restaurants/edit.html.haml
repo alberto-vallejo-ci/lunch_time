@@ -4,22 +4,22 @@
   = form_for(@restaurant) do |f|
     .form-group
       = f.label :name, t('general.name')
-      = f.text_field :name, { class: 'form-control', required: 'required' }
+      = f.text_field :name, { required: 'required' }
     .form-group
       = f.label :address, t('general.address')
-      = f.text_field :address, { class: 'form-control', required: 'required' }
+      = f.text_field :address, { required: 'required' }
     .form-group
       = f.label :telephone, t('general.telephone')
-      = f.text_field :telephone, class: 'form-control'
+      = f.text_field :telephone
     .form-group
       = f.label :average_cost, t('restaurants.spent')
       .input-group
         .input-group-addon $
-        = f.text_field :average_cost, { class: 'form-control', required: 'required' }
+        = f.text_field :average_cost, { required: 'required' }
     .form-group
       = f.label :average_rate, t('restaurants.rate')
-      = f.text_field :average_rate, { class: 'form-control', required: 'required' }
+      = f.text_field :average_rate, { required: 'required' }
     .form-group
       = f.label :comments, t('general.commets')
-      = f.text_area :comments, class: 'form-control'
-    =f.submit t('general.save'), class: 'btn btn-primary'
+      = f.text_area :comments
+    =f.submit t('general.save')

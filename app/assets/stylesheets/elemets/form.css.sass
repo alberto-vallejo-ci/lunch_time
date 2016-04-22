@@ -1,0 +1,16 @@
+@import "mixins"
+@import "bootstrap"
+
+form
+  input[type='text']
+    @extend .form-control
+
+  select
+    @include appearance-none
+    @extend .form-control
+
+  textarea
+    @extend .form-control
+
+  input[type='submit']
+    @extend .btn, .btn-primary
