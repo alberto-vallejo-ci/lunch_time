@@ -2,14 +2,11 @@
 @import "bootstrap"
 
 form
-  input[type='text']
+  input[type='text'], input[type='number'], textarea
     @extend .form-control
 
   select
     @include appearance-none
-    @extend .form-control
-
-  textarea
     @extend .form-control
 
   input[type='submit']

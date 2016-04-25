@@ -9,13 +9,20 @@ es:
     telephone: Teléfono
 
   home:
-    searches: Busquedas
     cost: ¿Cuanto te gustaría gastar?
-    rate: Elige el rango de prestigio
+    description:  <strong>LoncheTime</strong> te ayuda a decir que restaurtante visitar. Indica cuanto te gustaría
+                  gastar además de el prestigo del restaurante que te gustaría visitar,
+                  solo con eso podras ver una lista de restaurantes entre los que podras decidir.
+                  <br /><br />
+                  Tambien puedas dar una breve reseña de los restaurantes que ya has visitado y ayudar a
+                  alguien más a tomar una elegir.
     max_cost: Costo Maximo
     max_rate: Rango Maximo
     min_cost: Costo Mínimo
     min_rate: Rango Mínimo
+    question: ¿Te preguntas donde comer?
+    rate: Elige el rango de prestigio
+    searches: Busquedas
 
   restaurants:
     average_cost: Costo promedio
