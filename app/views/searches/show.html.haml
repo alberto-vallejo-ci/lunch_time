@@ -1,7 +1,5 @@
 .col-md-6.col-md-offset-3
-  %h3= t('general.results')
+  %p.font-big= t('results.message')
   %ul
-  - @restaurants.each do |restaurant|
-    %li= "#{restaurant.name} | $ #{restaurant.average_cost} MXN | #{restaurant.average_rate}"
-
-
+    - @restaurants.each do |restaurant|
+      %li= "#{restaurant.name} | $ #{restaurant.average_cost} MXN | #{restaurant.average_rate}"

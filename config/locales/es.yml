@@ -9,7 +9,7 @@ es:
     telephone: Teléfono
 
   home:
-    cost: ¿Cuanto te gustaría gastar?
+    cost: ¿Entre cuanto te gustaría gastar?
     description:  <strong>LoncheTime</strong> te ayuda a decir que restaurtante visitar. Indica cuanto te gustaría
                   gastar además de el prestigo del restaurante que te gustaría visitar,
                   solo con eso podras ver una lista de restaurantes entre los que podras decidir.
@@ -38,6 +38,9 @@ es:
     set_rate: ¿Que calificación le otorgas?
     spent: ¿Cuanto gastas normalmente?
     total_reviews: Total de reseñas
+
+  results:
+    message: Estos son los restaurantes que encontramos para ti.
 
   reviews:
     name: ¿Cual es tu nombre?

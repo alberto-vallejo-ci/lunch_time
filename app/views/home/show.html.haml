@@ -14,10 +14,17 @@
         .input-group-addon $
         = number_field_tag(:highest_cost, '100',  placeholder: t('home.max_cost'),
                             name: 'search[cost][highest]')
-    .form-group
+    .form-group#rate-group
       = label_tag t('home.rate')
       = number_field_tag(:lowest_rate, '1', placeholder: t('home.min_rate'),
-                       name: 'search[rate][lowest]')
+                       name: 'search[rate][lowest]', readonly: 'readonly')
       = number_field_tag(:highest_rate, '5', placeholder: t('home.max_rate'),
-                       name: 'search[rate][highest]')
+                       name: 'search[rate][highest]', readonly: 'readonly')
+      #slider-rate
+
     = submit_tag(t('general.search'))
+
+= content_for :javascript do
+  :coffee
+    $ ->
+      new LoncheTime.Home
