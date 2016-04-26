@@ -9,7 +9,6 @@ gem 'jbuilder'
 gem 'jquery-rails'
 gem 'mysql2'
 gem 'pg'
-gem 'turbolinks'
 gem 'uglifier'
 gem 'sass-rails'
 
