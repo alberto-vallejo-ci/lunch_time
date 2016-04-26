@@ -9,6 +9,8 @@
   #main-menu
     = render 'layouts/main_menu'
   #main-container
-    %div{ id: controller_name }
+    %div.main-section{ id: controller_name }
       = yield
+  #footer
+    = render 'layouts/footer'
   = yield :javascript
