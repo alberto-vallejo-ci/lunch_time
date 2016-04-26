@@ -2,4 +2,43 @@
 
 #restaurants
   #restaurants-list
-    @extend .list-items
+    margin: 10px 0
+
+    thead
+      border-bottom: solid 1px #CCC
+
+      th
+        text-align: center
+        width: 15%
+        &:first-child
+          text-align: left
+          width: 45%
+        &:last-child
+          width: 25%
+
+    tbody
+      tr
+        color: #777777
+        border-bottom: solid 1px #CCC
+        &:last-child
+          border: none
+        &:nth-child(even)
+          background: #F8F8F8
+
+        td
+          text-align: center
+          &:first-child
+            text-align: left
+
+    a
+      @extend .font-medium
+      color: #777777
+      display: inline-block
+      padding: 5px 0
+      width: 100%
+      &:hover
+        text-decoration: none
+
+    .actions
+      a
+        @extend .font-small

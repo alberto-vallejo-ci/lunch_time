@@ -1,8 +1,8 @@
-%li
-  .content
-    = link_to(restaurant.name, restaurant_path(restaurant.id))
-
-  .actions
-    = link_to ( new_restaurant_review_path(restaurant)) do
+%tr
+  %td= link_to(restaurant.name, restaurant_path(restaurant.id))
+  %td= restaurant.average_rate
+  %td= restaurant.average_cost
+  %td.actions
+    = link_to(new_restaurant_review_path(restaurant)) do
       %span{ class: 'glyphicon glyphicon-plus' }
       %span= t('restaurants.review')
