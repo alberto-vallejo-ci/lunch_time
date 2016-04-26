@@ -1,0 +1,8 @@
+%table#restaurants-list
+  %thead
+    %th= t('general.name')
+    %th= t('restaurants.average_cost')
+    %th= t('restaurants.average_rate')
+    %th
+  %tbody
+    = render partial: 'shared/restaurant_item', collection: restaurants, as: :restaurant

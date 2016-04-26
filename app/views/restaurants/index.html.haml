@@ -5,11 +5,4 @@
       %span{ class: 'glyphicon glyphicon-plus' }
       %span= t('restaurants.restaurant')
 
-  %table#restaurants-list
-    %thead
-      %th= t('general.name')
-      %th= t('restaurants.average_cost')
-      %th= t('restaurants.average_rate')
-      %th
-    %tbody
-      = render partial: 'restaurant_item', collection: @restaurants, as: :restaurant
+  = render partial: 'shared/restaurant_list', locals: { restaurants: @restaurants }
