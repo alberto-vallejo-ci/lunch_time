@@ -15,7 +15,7 @@
       = label_tag :rate, t('restaurants.set_rate')
       = select_tag :rate, options_for_select([1, 2, 3, 4, 5], 5), { name: 'review[rate]' }
     .form-group
-      = label_tag :comments, t('general.commets')
+      = label_tag :comments, t('general.comments')
       = text_area_tag :comments, '', name: 'review[comments]'
     .form-group
       = hidden_field_tag :restaurant_id, @restaurant.id, name: 'review[restaurant_id]'

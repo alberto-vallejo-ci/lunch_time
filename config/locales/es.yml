@@ -1,8 +1,10 @@
 es:
   general:
     address: Dirección
-    commets: Comentarios
+    comments: Comentarios
+    cost: Gasto
     name: Nombre
+    rate: Calificación
     results: Resultados
     save: Guardar
     search: Buscar

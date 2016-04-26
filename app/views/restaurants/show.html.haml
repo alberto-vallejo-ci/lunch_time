@@ -9,27 +9,39 @@
       %span{ class: 'glyphicon glyphicon-plus' }
       %span= t('restaurants.review')
 
-  %p
-    %span= "#{t('general.address')}:"
-    %span= @restaurant.address
-  %p
-    %span= "#{t('general.telephone')}:"
-    %span= @restaurant.telephone
-  %p
-    %span= "#{t('restaurants.average_cost')}:"
-    %span= "$ #{@restaurant.average_cost} MXN"
-  %p
-    %span= "#{t('restaurants.average_rate')}:"
-    %span= @restaurant.average_rate
-  %p
-    %span= "#{t('general.commets')}:"
-    %span= @restaurant.comments
+  %ul#restaurant-info
+    %li
+      %span= "#{ t('general.address') }:"
+      %span= @restaurant.address
+    %li
+      %span= "#{ t('general.telephone') }:"
+      %span=  @restaurant.telephone
+    %li
+      %span= "#{ t('restaurants.average_cost') }:"
+      %span= "$ #{ @restaurant.average_cost } MXN"
+    %li
+      %span= "#{ t('restaurants.average_rate') }:"
+      %span= @restaurant.average_rate
+
+  %h4.comments= "#{t('general.comments')}"
+  %p.comments= @restaurant.comments
 
   #restaurant-reviews
-    %h3= t('restaurants.reviews')
+    %h4= t('restaurants.reviews')
     %p
       %span= "#{t('restaurants.total_reviews')}:"
       %span= @restaurant.reviews.count
-    %ul
-      - @restaurant.reviews.each do |review|
-        %li= "#{review.name} | #{review.rate} | $#{review.cost}MXN | #{ review.comments }"
+
+    %table
+      %thead
+        %th= t('general.name')
+        %th= t('general.rate')
+        %th= t('general.cost')
+        %th= t('general.comments')
+      %tbody
+        - @restaurant.reviews.each do |review|
+          %tr
+            %td= review.name
+            %td= review.rate
+            %td= "$ #{review.cost} MXN"
+            %td= review.comments

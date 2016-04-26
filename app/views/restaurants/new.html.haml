@@ -22,6 +22,6 @@
       = label_tag :rate, t('restaurants.rate'), class: 'font-small'
       = f.select :average_rate, options_for_select([1, 2, 3, 4, 5], 5)
     .form-group
-      = f.label :comments, t('general.commets')
+      = f.label :comments, t('general.comments')
       = f.text_area :comments, placeholder: t('restaurants.comments_holder')
     = f.submit t('general.save')
