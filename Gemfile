@@ -9,6 +9,7 @@ gem 'jbuilder'
 gem 'jquery-rails'
 gem 'mysql2'
 gem 'pg'
+gem 'react-rails'
 gem 'uglifier'
 gem 'sass-rails'
 
@@ -23,4 +24,3 @@ group :development do
   gem 'web-console'
   gem 'spring'
 end
-
